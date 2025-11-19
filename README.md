@@ -71,7 +71,7 @@ A standalone desktop application that masks sensitive identifiers and text befor
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/codemasklab/codemask.git
+   git clone https://github.com/codemasklab/codemask-oss.git
    cd codemask-oss
    ```
 
@@ -220,8 +220,8 @@ Mappings are stored at:
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/codemasklab/codemask/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/codemasklab/codemask/discussions)
+- **Issues**: [GitHub Issues](https://github.com/codemasklab/codemask-oss/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/codemasklab/codemask-oss/discussions)
 
 ## Acknowledgments
 

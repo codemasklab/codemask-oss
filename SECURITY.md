@@ -106,5 +106,5 @@ We appreciate responsible disclosure and will credit security researchers who he
 
 For security-related questions, please create a private security advisory on GitHub or email the repository maintainers.
 
-For general questions, use [GitHub Discussions](https://github.com/codemasklab/codemask/discussions).
+For general questions, use [GitHub Discussions](https://github.com/codemasklab/codemask-oss/discussions).
 
