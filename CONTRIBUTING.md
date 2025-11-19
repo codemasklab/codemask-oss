@@ -10,7 +10,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](CO
 
 ### Reporting Bugs
 
-1. Check if the bug has already been reported in [GitHub Issues](https://github.com/yourusername/codemask-oss/issues)
+1. Check if the bug has already been reported in [GitHub Issues](https://github.com/codemasklab/codemask/issues)
 2. If not, create a new issue with:
    - A clear, descriptive title
    - Steps to reproduce the bug
@@ -68,7 +68,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](CO
 
 1. **Clone your fork**:
    ```bash
-   git clone https://github.com/yourusername/codemask-oss.git
+   git clone https://github.com/codemasklab/codemask.git
    cd codemask-oss
    ```
 
@@ -156,7 +156,7 @@ This is the **open-source version** that supports:
 
 ## Questions?
 
-- Open a [GitHub Discussion](https://github.com/yourusername/codemask-oss/discussions)
+- Open a [GitHub Discussion](https://github.com/codemasklab/codemask/discussions)
 - Check existing issues and discussions
 
 Thank you for contributing to CodeMask OSS! 🎉

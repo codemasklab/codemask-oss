@@ -103,7 +103,7 @@ codemask-oss/
 
 3. **Push to GitHub**:
    ```bash
-   git remote add origin https://github.com/yourusername/codemask-oss.git
+   git remote add origin https://github.com/codemasklab/codemask.git
    git branch -M main
    git push -u origin main
    ```
