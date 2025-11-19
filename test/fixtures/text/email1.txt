@@ -1,0 +1,13 @@
+Dear Novus Customer,
+
+We are writing to inform you about your account with Novus Technologies. 
+Your account email is customer@example.com and your phone number is 555-123-4567.
+You can access your account at https://novus.example.com/dashboard.
+
+Your transaction ID is 123e4567-e89b-12d3-a456-426614174000.
+
+Thank you for being a valued Novus customer.
+
+Best regards,
+Novus Support Team
+

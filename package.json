@@ -1,0 +1,51 @@
+{
+  "name": "codemask-oss",
+  "version": "1.0.0",
+  "description": "Open Source Code & Text Masker for LLM safety - Python and Text modes only",
+  "main": "dist/app/main.js",
+  "scripts": {
+    "build": "tsc && npm run build-ui && npm run copy-assets",
+    "build-ui": "node scripts/build-ui.js",
+    "copy-assets": "node scripts/copy-assets.js",
+    "download-grammars": "node scripts/download-grammars.js",
+    "postinstall": "echo 'Using web-tree-sitter (WASM) - no rebuild needed' && npm run download-grammars || echo 'Grammar download failed, run npm run download-grammars manually'",
+    "start": "npm run build && electron .",
+    "dev": "npm run build && electron .",
+    "test": "jest",
+    "watch": "tsc --watch"
+  },
+  "keywords": [
+    "code-masking",
+    "privacy",
+    "llm",
+    "python",
+    "text-masking",
+    "open-source"
+  ],
+  "author": "SOFT360 INC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/codemask-oss.git"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.0",
+    "electron": "^28.0.0",
+    "esbuild": "^0.25.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.45.0",
+    "keytar": "^7.9.0",
+    "tree-sitter": "^0.21.1",
+    "tree-sitter-python": "^0.21.0",
+    "web-tree-sitter": "^0.25.10"
+  },
+  "overrides": {
+    "@tree-sitter/python": "npm:tree-sitter-python@0.21.0"
+  }
+}
+

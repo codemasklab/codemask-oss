@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> </title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Custom Titlebar (shown - using custom menu with native OS window controls) -->
+    <div class="titlebar" id="titlebar">
+      <!-- Menu items on the left -->
+      <div class="titlebar-menu" id="titlebar-menu">
+        <div class="menu-item">
+          <button class="menu-button" id="menu-file">File</button>
+          <div class="menu-dropdown" id="dropdown-file">
+            <button class="menu-dropdown-item" id="menu-new-window">
+              <span class="menu-item-label">New</span>
+              <span class="menu-item-shortcut">Ctrl + N</span>
+            </button>
+            <div class="menu-separator"></div>
+            <button class="menu-dropdown-item" id="menu-open">
+              <span class="menu-item-label">Open</span>
+              <span class="menu-item-shortcut">Ctrl + O</span>
+            </button>
+            <div class="menu-separator"></div>
+            <button class="menu-dropdown-item" id="menu-save">
+              <span class="menu-item-label">Save</span>
+              <span class="menu-item-shortcut">Ctrl + S</span>
+            </button>
+            <button class="menu-dropdown-item" id="menu-save-as">
+              <span class="menu-item-label">Save As</span>
+              <span class="menu-item-shortcut">Ctrl + Shift + S</span>
+            </button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <button class="menu-button" id="menu-edit">Edit</button>
+          <div class="menu-dropdown" id="dropdown-edit">
+            <button class="menu-dropdown-item" id="menu-cut">
+              <span class="menu-item-label">Cut</span>
+              <span class="menu-item-shortcut">Ctrl + X</span>
+            </button>
+            <button class="menu-dropdown-item" id="menu-copy">
+              <span class="menu-item-label">Copy</span>
+              <span class="menu-item-shortcut">Ctrl + C</span>
+            </button>
+            <button class="menu-dropdown-item" id="menu-paste">
+              <span class="menu-item-label">Paste</span>
+              <span class="menu-item-shortcut">Ctrl + V</span>
+            </button>
+            <button class="menu-dropdown-item" id="menu-delete">
+              <span class="menu-item-label">Delete</span>
+              <span class="menu-item-shortcut">Del</span>
+            </button>
+            <div class="menu-separator"></div>
+            <button class="menu-dropdown-item" id="menu-undo">
+              <span class="menu-item-label">Undo</span>
+              <span class="menu-item-shortcut">Ctrl + Z</span>
+            </button>
+            <button class="menu-dropdown-item" id="menu-redo">
+              <span class="menu-item-label">Redo</span>
+              <span class="menu-item-shortcut" id="redo-shortcut">Ctrl + Y</span>
+            </button>
+            <div class="menu-separator"></div>
+            <button class="menu-dropdown-item" id="menu-clear-input">
+              <span class="menu-item-label">Clear Input</span>
+              <span class="menu-item-shortcut" id="clear-input-shortcut">Ctrl + Shift + U</span>
+            </button>
+            <button class="menu-dropdown-item" id="menu-clear-output">
+              <span class="menu-item-label">Clear Output</span>
+              <span class="menu-item-shortcut" id="clear-output-shortcut">Ctrl + Shift + O</span>
+            </button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <button class="menu-button" id="menu-view">View</button>
+          <div class="menu-dropdown" id="dropdown-view">
+            <button class="menu-dropdown-item" id="menu-view-select-namespace">
+              <span class="menu-item-label">Select Mapping Group</span>
+              <span class="menu-item-shortcut">Ctrl + Shift + M</span>
+            </button>
+            <div class="menu-separator"></div>
+            <button class="menu-dropdown-item" id="menu-dev-tools">
+              <span class="menu-item-label">Toggle Developer Tools</span>
+              <span class="menu-item-shortcut" id="dev-tools-shortcut">Ctrl + Shift + I</span>
+            </button>
+            <div class="menu-separator"></div>
+            <div class="menu-submenu-container">
+              <button class="menu-dropdown-item has-submenu" id="menu-language">
+                <span class="menu-item-label">Language</span>
+                <span class="menu-item-arrow">▶</span>
+              </button>
+              <div class="menu-submenu" id="submenu-language">
+                <button class="menu-dropdown-item" id="menu-lang-python">
+                  <span class="menu-item-label">Python</span>
+                </button>
+                <button class="menu-dropdown-item" id="menu-lang-plaintext">
+                  <span class="menu-item-label">Plain Text</span>
+                </button>
+              </div>
+            </div>
+            <div class="menu-separator"></div>
+            <button class="menu-dropdown-item" id="menu-view-next-tab">
+              <span class="menu-item-label">Next Tab</span>
+              <span class="menu-item-shortcut" id="next-tab-shortcut">Ctrl + Tab</span>
+            </button>
+            <button class="menu-dropdown-item" id="menu-view-prev-tab">
+              <span class="menu-item-label">Previous Tab</span>
+              <span class="menu-item-shortcut" id="prev-tab-shortcut">Ctrl + Shift + Tab</span>
+            </button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <button class="menu-button" id="menu-window">Window</button>
+          <div class="menu-dropdown" id="dropdown-window">
+            <button class="menu-dropdown-item" id="menu-window-new">
+              <span class="menu-item-label">New Window</span>
+              <span class="menu-item-shortcut">Ctrl + Shift + N</span>
+            </button>
+            <div class="menu-separator"></div>
+            <button class="menu-dropdown-item" id="menu-window-close">
+              <span class="menu-item-label">Close</span>
+              <span class="menu-item-shortcut">Ctrl + W</span>
+            </button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <button class="menu-button" id="menu-help">Help</button>
+          <div class="menu-dropdown" id="dropdown-help">
+            <button class="menu-dropdown-item" id="menu-help-about">About</button>
+            <div class="menu-separator"></div>
+            <button class="menu-dropdown-item" id="menu-help-restart">Restart to Update</button>
+            <div class="menu-separator"></div>
+            <button class="menu-dropdown-item" id="menu-help-manual">Online Manual</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Search bar in the middle -->
+      <div class="titlebar-search-container">
+        <svg class="titlebar-search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <circle cx="6" cy="6" r="4" stroke="#6e6e6e" stroke-width="1.5" fill="none"/>
+          <path d="M 9.5 9.5 L 12.5 12.5" stroke="#6e6e6e" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input type="text" class="titlebar-search" id="titlebar-search" placeholder="Search..." />
+        <button class="titlebar-search-clear" id="titlebar-search-clear" title="Clear search" style="display: none;">
+          <svg width="12" height="12" viewBox="0 0 12 12">
+            <path d="M 1,1 L 11,11 M 11,1 L 1,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Drag region (remaining space) -->
+      <div class="titlebar-drag-region"></div>
+      
+      <!-- Status message (saving/saved indicator) -->
+      <div class="titlebar-status" id="titlebar-status" style="display: none;">
+        <span class="titlebar-status-spinner" id="titlebar-status-spinner" style="display: none;">
+          <svg width="12" height="12" viewBox="0 0 12 12">
+            <circle cx="6" cy="6" r="4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8 16" opacity="0.6"/>
+          </svg>
+        </span>
+        <span class="titlebar-status-text" id="titlebar-status-text"></span>
+      </div>
+      
+      <!-- Window controls on the right (hidden - using native OS controls with overlay) -->
+      <div class="titlebar-controls" style="display: none;">
+        <button class="titlebar-button titlebar-button-minimize" id="titlebar-minimize" title="Minimize">
+          <svg width="12" height="12" viewBox="0 0 12 12">
+            <path d="M 0,6 L 12,6" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </button>
+        <button class="titlebar-button titlebar-button-maximize" id="titlebar-maximize" title="Maximize">
+          <svg width="12" height="12" viewBox="0 0 12 12">
+            <path d="M 1,1 L 11,1 L 11,11 L 1,11 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </button>
+        <button class="titlebar-button titlebar-button-close" id="titlebar-close" title="Close">
+          <svg width="12" height="12" viewBox="0 0 12 12">
+            <path d="M 1,1 L 11,11 M 11,1 L 1,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Tab Bar -->
+    <div class="tab-bar" id="tab-bar">
+      <div class="tabs-container" id="tabs-container">
+        <!-- Tabs will be dynamically added here -->
+        <button class="tab-add-button" id="tab-add-button" title="New Tab">+</button>
+      </div>
+    </div>
+    
+    <header class="header">
+      <div class="logo-container">
+        <img src="logo.png" alt="CodeMaskLab" class="logo" id="logo-img" />
+        <span class="logo-text">CODEMASK<span class="logo-text-lab">LAB</span></span>
+      </div>
+      <div class="controls-top">
+        <div class="mode-switch">
+          <button id="mode-code" class="mode-btn active">Code</button>
+          <button id="mode-text" class="mode-btn">Text</button>
+        </div>
+        <div class="language-selector" id="language-selector">
+          <label for="language">Language:</label>
+          <select id="language-select">
+            <option value="python" selected>Python</option>
+          </select>
+        </div>
+        <div class="namespace-input">
+          <label for="namespace" title="Isolates mappings: same identifier in different namespaces gets different tokens">
+            Mapping Group:
+            <span class="help-icon" title="Use different names to isolate mappings. Same identifier in different groups gets different tokens. Useful for separating projects or tabs.">i</span>
+          </label>
+          <div class="namespace-input-wrapper">
+            <input type="text" id="namespace" list="namespace-list" value="default" placeholder="default" title="Isolates mappings: same identifier in different namespaces gets different tokens">
+            <datalist id="namespace-list"></datalist>
+            <button id="refresh-namespaces-btn" class="btn-icon" title="Refresh list of existing mapping groups">↻</button>
+          </div>
+        </div>
+        <button id="wipe-btn" class="btn-danger">Wipe Mapping</button>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="pane-container">
+        <div class="pane input-pane">
+          <div class="pane-header">
+            <h2>Input</h2>
+            <div class="pane-controls">
+              <div class="search-navigation" id="input-search-nav" style="display: none;">
+                <button class="search-nav-btn" id="input-search-prev" title="Previous match">▲</button>
+                <button class="search-nav-btn" id="input-search-next" title="Next match">▼</button>
+              </div>
+              <span id="selected-count">Selected: 0</span>
+            </div>
+          </div>
+          <div id="input-text" class="monaco-container"></div>
+        </div>
+
+        <div class="pane output-pane">
+          <div class="pane-header">
+            <h2>Output</h2>
+            <div class="pane-controls">
+              <div class="search-navigation" id="output-search-nav" style="display: none;">
+                <button class="search-nav-btn" id="output-search-prev" title="Previous match">▲</button>
+                <button class="search-nav-btn" id="output-search-next" title="Next match">▼</button>
+              </div>
+            </div>
+          </div>
+          <div id="output-text" class="monaco-container"></div>
+        </div>
+      </div>
+
+      <div class="action-bar">
+        <div class="code-actions" id="code-actions">
+          <label class="checkbox-label">
+            <input type="checkbox" id="include-properties" checked>
+            Include Properties
+          </label>
+          <button id="auto-mask-btn" class="btn-primary">Auto-mask</button>
+          <button id="mask-selected-btn" class="btn-primary">Mask Selected</button>
+        </div>
+        <div class="text-actions" id="text-actions" style="display: none;">
+          <button id="text-mask-btn" class="btn-primary">Mask Selected</button>
+          <button id="detect-email-btn" class="btn-secondary">Detect Email</button>
+          <button id="detect-url-btn" class="btn-secondary">Detect URL</button>
+          <button id="detect-uuid-btn" class="btn-secondary">Detect UUID</button>
+          <button id="detect-phone-btn" class="btn-secondary">Detect Phone</button>
+        </div>
+        <div class="common-actions">
+          <button id="unmask-btn" class="btn-primary">Unmask</button>
+        </div>
+        <div class="copy-actions">
+          <button id="copy-btn" class="btn-secondary">Copy Output</button>
+        </div>
+      </div>
+
+      <div class="symbols-selected-container">
+        <div class="symbols-panel" id="symbols-panel">
+          <h3>Auto-detected Identifiers</h3>
+          <div id="symbols-list" class="symbols-container">
+            <!-- Symbols will be listed here -->
+          </div>
+        </div>
+
+        <div class="arrow-container">
+          <div id="arrow-right" class="arrow-right">→</div>
+        </div>
+
+        <div class="selected-panel">
+          <div class="selected-panel-header">
+            <h3>Selected Items</h3>
+            <button id="clear-selected-btn" class="btn-secondary btn-small" title="Clear all selected items">Clear</button>
+          </div>
+          <div id="selected-chips" class="chips-container">
+            <!-- Chips will be added here -->
+            <div id="selected-empty-message" class="empty-message">
+              Click identifiers on the left or use the arrow to add them here. Selected items will be masked when you click "Mask Selected".
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="llm-note">
+        <h3>LLM Prompt Note</h3>
+        <div class="note-content">
+          <code>This code/text contains placeholder identifiers like v6g9j2r41m5qk. Do not rename or modify them.</code>
+          <button id="copy-note-btn" class="btn-secondary btn-small">Copy Note</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Monaco Editor -->
+  <script src="monaco/min/vs/loader.js"></script>
+  <script>
+    // Configure Monaco Editor loader
+    require.config({ paths: { vs: 'monaco/min/vs' } });
+    require(['vs/editor/editor.main'], function() {
+      // Monaco is loaded and available globally
+      console.log('Monaco Editor loaded successfully');
+    });
+  </script>
+  <!-- Load our app (will wait for Monaco to be available) -->
+  <script src="app.js"></script>
+  
+  <!-- Modern Dialog Modal -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Title</h3>
+        <button class="modal-close" id="modal-close">×</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p id="modal-message">Message</p>
+      </div>
+      <div class="modal-footer" id="modal-footer">
+        <button class="btn-secondary" id="modal-cancel">Cancel</button>
+        <button class="btn-primary" id="modal-confirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Namespace Selector Modal -->
+  <div id="namespace-selector-overlay" class="modal-overlay hidden">
+    <div class="modal namespace-selector-modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Select Mapping Group</h3>
+        <button class="modal-close" id="namespace-selector-close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="namespace-selector-content">
+          <input type="text" id="namespace-selector-filter" placeholder="Filter mapping groups..." class="namespace-filter-input">
+          <div id="namespace-selector-list" class="namespace-list">
+            <!-- Namespaces will be listed here -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="namespace-selector-cancel">Cancel</button>
+        <button class="btn-primary" id="namespace-selector-select" disabled>Select</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
