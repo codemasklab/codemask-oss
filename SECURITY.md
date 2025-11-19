@@ -19,7 +19,7 @@ Security vulnerabilities should be reported privately to prevent exploitation.
 
 ### 2. Email Security Team
 
-Please email security details to: **security@yourdomain.com** (or create a private security advisory on GitHub)
+Please email security details to: **security@codemasklab.com** (or create a private security advisory on GitHub)
 
 Include the following information:
 - Description of the vulnerability
