@@ -38,7 +38,7 @@ A standalone desktop application that masks sensitive identifiers and text befor
 - **Linux (Debian/Ubuntu)**: [Download .deb package](https://github.com/codemasklab/codemask-oss/releases/download/v1.0.0/CodeMask-1.0.0-amd64.deb)
 - **Linux (Universal)**: [Download AppImage](https://github.com/codemasklab/codemask-oss/releases/download/v1.0.0/CodeMask-1.0.0-x86_64.AppImage)
 
-**View all releases**: [GitHub Releases](https://github.com/codemasklab/codemask-oss/releases) | [Download Page](https://codemasklab.com/download)
+**View all releases**: [GitHub Releases](https://github.com/codemasklab/codemask-oss/releases)
 
 ### Option 2: Build from Source
 
@@ -237,7 +237,6 @@ Mappings are stored at:
 ## Support
 
 - **Website**: [codemasklab.com](https://codemasklab.com)
-- **Documentation**: [Documentation](https://codemasklab.com/docs)
 - **Issues**: [GitHub Issues](https://github.com/codemasklab/codemask-oss/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/codemasklab/codemask-oss/discussions)
 
