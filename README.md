@@ -28,7 +28,23 @@ A standalone desktop application that masks sensitive identifiers and text befor
 
 ## Installation
 
-### Prerequisites
+### Option 1: Download Pre-built Executables (Recommended)
+
+**Download the latest release (v1.0.0) for your platform:**
+
+- **Windows**: [Download .exe installer (x64)](https://github.com/codemasklab/codemask-oss/releases/download/v1.0.0/CodeMask-1.0.0-x64.exe)
+- **macOS (Apple Silicon)**: [Download .dmg (ARM64)](https://github.com/codemasklab/codemask-oss/releases/download/v1.0.0/CodeMask-1.0.0-arm64.dmg)
+- **macOS (Intel)**: [Download .dmg (x64)](https://github.com/codemasklab/codemask-oss/releases/download/v1.0.0/CodeMask-1.0.0-x64.dmg)
+- **Linux (Debian/Ubuntu)**: [Download .deb package](https://github.com/codemasklab/codemask-oss/releases/download/v1.0.0/CodeMask-1.0.0-amd64.deb)
+- **Linux (Universal)**: [Download AppImage](https://github.com/codemasklab/codemask-oss/releases/download/v1.0.0/CodeMask-1.0.0-x86_64.AppImage)
+
+**View all releases**: [GitHub Releases](https://github.com/codemasklab/codemask-oss/releases) | [Download Page](https://codemasklab.com/download)
+
+### Option 2: Build from Source
+
+If you prefer to build from source or want to contribute:
+
+#### Prerequisites
 
 1. **Node.js and npm**: Install Node.js 18+ and npm
    ```bash
@@ -67,7 +83,7 @@ A standalone desktop application that masks sensitive identifiers and text befor
    # Install Visual Studio Build Tools
    ```
 
-### Installation Steps
+#### Build Steps
 
 1. Clone the repository:
    ```bash
@@ -220,6 +236,8 @@ Mappings are stored at:
 
 ## Support
 
+- **Website**: [codemasklab.com](https://codemasklab.com)
+- **Documentation**: [Documentation](https://codemasklab.com/docs)
 - **Issues**: [GitHub Issues](https://github.com/codemasklab/codemask-oss/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/codemasklab/codemask-oss/discussions)
 
