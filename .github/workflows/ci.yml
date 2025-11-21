@@ -40,7 +40,9 @@ jobs:
       run: npm test
       continue-on-error: true
 
-    - name: Check for build artifacts
+    - name: Check for build artifacts (Linux/macOS)
+      if: runner.os != 'Windows'
+      shell: bash
       run: |
         if [ -d "dist" ]; then
           echo "✅ Build successful - dist directory exists"
@@ -48,4 +50,15 @@ jobs:
           echo "❌ Build failed - dist directory not found"
           exit 1
         fi
+
+    - name: Check for build artifacts (Windows)
+      if: runner.os == 'Windows'
+      shell: pwsh
+      run: |
+        if (Test-Path "dist") {
+          Write-Host "✅ Build successful - dist directory exists"
+        } else {
+          Write-Host "❌ Build failed - dist directory not found"
+          exit 1
+        }
 
