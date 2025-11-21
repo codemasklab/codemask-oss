@@ -39,7 +39,11 @@ temp/
 
 # Electron
 out/
-build/
+# build/ - Allow icon files for electron-builder
+build/*
+!build/*.ico
+!build/*.icns
+!build/*.png
 
 # Mapping store (user data - should not be committed)
 *.encrypted
