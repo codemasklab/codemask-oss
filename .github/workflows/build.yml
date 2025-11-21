@@ -107,7 +107,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: linux-build
-          path: dist/*.{AppImage,deb,rpm}
+          path: |
+            dist/*.AppImage
+            dist/*.deb
+            dist/*.rpm
           if-no-files-found: error
 
   release:
